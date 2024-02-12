@@ -59,7 +59,7 @@ public class CurrencyController {
     }
 
     @DeleteMapping(path = "/api/currency/{currencyId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public WebResponse<String> update(User user, @PathVariable(name = "currencyId") Integer currencyId) {
+    public WebResponse<String> delete(User user, @PathVariable(name = "currencyId") Integer currencyId) {
         currencyService.delete(user, currencyId);
         return WebResponse.<String>builder()
                 .data("OK")

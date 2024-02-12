@@ -22,7 +22,9 @@ public class AuthController {
     @PostMapping(path = "/api/auth/login", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public WebResponse<TokenResponse> login(@RequestBody LoginRequest request) {
         TokenResponse response = authService.login(request);
-        return WebResponse.<TokenResponse>builder().data(response).build();
+        return WebResponse.<TokenResponse>builder()
+                .data(response)
+                .build();
     }
 
     @DeleteMapping(path = "/api/auth/logout", produces = MediaType.APPLICATION_JSON_VALUE)

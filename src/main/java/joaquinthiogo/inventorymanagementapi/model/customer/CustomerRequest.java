@@ -1,5 +1,6 @@
 package joaquinthiogo.inventorymanagementapi.model.customer;
 
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -15,6 +16,7 @@ import lombok.NoArgsConstructor;
 public class CustomerRequest {
 
     @NotBlank
+    @Max(200)
     private String name;
 
     private String address;
