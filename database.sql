@@ -94,4 +94,20 @@ create table customers(
 
 select * from customers;
 
-desc  customers;
+desc customers;
+
+truncate table units;
+
+select *
+from units;
+
+delete from items;
+
+truncate table units;
+
+truncate table users;
+
+truncate table suppliers;
+
+select * from users;
+
