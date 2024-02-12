@@ -1,0 +1,31 @@
+GET http://localhost:8080/api/supplier?pageNumber=1
+X-API-TOKEN: test
+
+###
+
+GET http://localhost:8080/api/search/item?description=alum
+X-API-TOKEN: test
+
+###
+
+POST http://localhost:8080/api/currency
+X-API-TOKEN: test
+Content-Type: application/json
+
+{
+  "currency": "IDRssss",
+  "remark": "Indonesia Rupiah",
+  "rate": "15.000"
+}
+
+###
+
+PUT http://localhost:8080/api/currency/36
+X-API-TOKEN: test
+Content-Type: application/json
+
+{
+"currency": "IDRssss Update",
+"remark": "Indonesia Rupiah Update",
+"rate": "23.000"
+}
