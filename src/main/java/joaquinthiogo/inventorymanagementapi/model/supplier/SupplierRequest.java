@@ -19,7 +19,7 @@ import java.math.BigInteger;
 public class SupplierRequest {
 
     @NotBlank
-    @Max(200)
+    @Size(max = 200)
     private String name;
 
     @NotBlank
