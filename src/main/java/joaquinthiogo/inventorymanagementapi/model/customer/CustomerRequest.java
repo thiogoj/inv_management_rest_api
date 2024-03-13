@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class CustomerRequest {
 
     @NotBlank
-    @Max(200)
+    @Size(max = 200)
     private String name;
 
     private String address;
